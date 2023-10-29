@@ -1,5 +1,17 @@
+
+
 .App {
   display: flex;
   justify-content: center;
-  padding: 1em;
+  flex-direction: column;
+}
+
+.App * {
+  font-size: 1em;
+  font-family: Calibri, sans-serif;
+}
+
+
+.center-text {
+  text-align: center;
 }

@@ -2,3 +2,6 @@ npm install -g create-react-app-offline
 
 crao -n <priject name>
 
+
+
+docker-compose -f docker-compose.dev.yml up
