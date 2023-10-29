@@ -1,0 +1,27 @@
+
+
+table th, td {
+   border: 1px solid rgba(0,0,0,0.4);
+   padding: 0.4em 1em;
+   font-family: Calibri;
+   vertical-align: middle;
+}
+
+table th {
+   background-color: rgba(173, 224, 241, 0.689);
+   font-weight: bold;
+   text-align: left;
+}
+
+table td {
+   
+}
+
+table {
+   border-collapse: collapse;
+}
+
+.livre {
+   padding: 1em;
+   border: 1px solid rgba(0,0,0,0.4);
+}

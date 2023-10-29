@@ -1,0 +1,4 @@
+npm install -g create-react-app-offline
+
+crao -n <priject name>
+

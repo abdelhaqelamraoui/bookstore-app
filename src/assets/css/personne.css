@@ -1,0 +1,39 @@
+
+
+.personne {
+
+}
+
+/* ------------ header ------------ */
+
+.personne .personne-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   column-gap: 2em;
+}
+
+.personne .personne-header > div {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   column-gap: 1em;
+}
+
+.personne .personne-header label {
+   font-weight: bold;
+}
+
+/* ------------ body ------------ */
+
+.personne .personne-body {
+
+}
+
+.personne .personne-body p {
+   font-weight: bold;
+   text-align: left;
+}
+.personne .personne-body ol {
+   text-align: left;
+}
