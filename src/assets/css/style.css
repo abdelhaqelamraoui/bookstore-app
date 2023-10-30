@@ -1,37 +1,5 @@
 
 
-table th, td {
-   border: 1px solid rgba(0,0,0,0.4);
-   padding: 0.4em 1em;
-   font-family: Calibri;
-   vertical-align: middle;
-}
-
-table th {
-   background-color: rgba(173, 224, 241, 0.689);
-   font-weight: bold;
-   text-align: left;
-
-}
-
-table td {
- 
-}
-
-table {
-   border-collapse: collapse;
-}
-
-.livre {
-   padding: 1em;
-   border: 1px solid rgba(0,0,0,0.4);
-}
-
-.livre table {
-   width: 100%;
-   height: 100%;
-}
-
 /* ------------main------------ */
 .main {
    flex: 1;
@@ -40,9 +8,6 @@ table {
    padding-top: 2em;
 }
 
-.main * {
-   /*  */
-}
 
 /* ----------- navbar ------------ */
 
@@ -52,7 +17,7 @@ table {
    text-align: left;
    display: flex;
    align-items: center;
-   justify-content: start;
+   justify-content: flex-start;
    padding: 0.4em 1em;
 }
 
@@ -76,31 +41,6 @@ table {
 }
 
 
-/* ----------------add livre page ------------------ */
-.add-livre {
-   width: 40em;
-}
-
-.add-livre table {
-   width: 100%;
-}
-
-.info-row {
-   width: 100%;
-   display: flex;
-   column-gap: 3em;
-   justify-content: space-between;
-   margin-bottom: 8px;
-}
-
-.info-row *:first-child {
-   flex: 3;
-}
-
-.info-row *:last-child {
-   flex: 7;
-}
-
 /* ------------------error page----------------- */
 
 .error {
@@ -114,10 +54,3 @@ table {
    font-family: Barlow, Calibr, Aria, sans-serif;
 }
 
-
-/* ----------------- liste livres page ---------------*/
-.liste-livres {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 3em;
-}
