@@ -2,10 +2,10 @@
 
 /* ------------main------------ */
 .main {
-   flex: 1;
+   /* flex: 1;
    display: flex;
    justify-content: center;
-   padding-top: 2em;
+   padding-top: 2em; */
 }
 
 
@@ -55,26 +55,3 @@
 }
 
 /* ---------tabe ---------- */
-
-table {
-   width: 40em;
-   border-collapse: collapse;
-   font-family: Barlow, Calibri, sans-serif;
-   margin-top: 2em;
-}
-
-table td, th {
-   border: 1px solid rgba(0,0,0,6);
-   padding: 0.4em 1em;
-}
-
-table thead {
-   background-color: lightblue;
-}
-
-button {
-   padding: 0.5em 1em;
-   border: 1px solid black;
-   border-radius: 4px;
-   width: 180px;
-}

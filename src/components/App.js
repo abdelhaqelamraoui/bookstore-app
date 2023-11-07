@@ -12,10 +12,10 @@ const App = () => {
       <div className="App">
          {/* <AppContext.Provider value={{}}> */}
             <BrowserRouter>
-               <div className="navbar">
+               <div className="navbar position-fixed bg-dark top-0 w-100 px-4">
                   <Navbar />
                </div>
-               <div className="main">
+               <div className="main p-5">
                   <Routes>
                      <Route path="/" element={<Home />} />
                      <Route path="/*" element={<Error />} />
