@@ -1,5 +1,8 @@
 
 import React, { useState } from "react";
+import { Button, H2, Input, Label} from "./StyledComponents";
+import { Info } from "./Info";
+
 
 export const Main = () => {
 
@@ -9,6 +12,8 @@ export const Main = () => {
    const [sexe, setSexe] = useState('');
    const [diplomes, setDiplomes] = useState([]);
    const [ville, setVille] = useState('');
+   const [info, setInfo] = useState({});
+   const [afficher, setAfficher] = useState(false);
 
 
    const handleMatriculeChange = (event) => {
@@ -53,94 +58,83 @@ export const Main = () => {
 
    const handleFormSubmit = (event) => {
       event.preventDefault();
-      let msg = '';
-
-      const states = {
-         matricule: matricule,
-         nomComplet: nomComplet,
-         dateNaissance: dateNaissance,
-         sexe: sexe,
-         diplomes: diplomes,
-         ville: ville
-      }
-      
-      for (const key in states) {
-         const element = states[key];
-         const nomChmaps = key.charAt(0).toLocaleUpperCase() + key.substring(1)
-         if(Array.isArray(element)) {
-            msg += `${nomChmaps} : ${element.join(' - ')} `;
-         } else {
-            msg += `${nomChmaps} : ${element} `;            
-         }
-      }
-      alert(msg);
+      setInfo({
+         'matricule': matricule,
+         'nomComplet': nomComplet,
+         'dateNaissance': dateNaissance,
+         'sexe': sexe,
+         'diplomes': diplomes,
+         'ville': ville
+      })
+      setAfficher(true)
    }
 
 
    return (
       <form className="w-50" onSubmit={handleFormSubmit}>
+         <H2>Gestion des Employés</H2>
          <div className="mt-3">
-            <label htmlFor="" className="form-label">Matricule</label>
-            <input className="form-control" type="text" onChange={handleMatriculeChange}/>
+            <Label htmlFor="" className="form-Label">Matricule</Label>
+            <Input className="form-control" type="text" onChange={handleMatriculeChange}/>
          </div>
          <div className="mt-3">
-            <label htmlFor="" className="form-label">Nom Complet</label>
-            <input className="form-control" type="text" onChange={handleNomCompletChange}/>
+            <Label htmlFor="" className="form-Label">Nom Complet</Label>
+            <Input className="form-control" type="text" onChange={handleNomCompletChange}/>
          </div>
          <div className="mt-3">
-            <label htmlFor="" className="form-label">Date de naissance</label>
-            <input className="form-control" type="date" onChange={handleDateNaissanceChange}/>
+            <Label htmlFor="" className="form-Label">Date de naissance</Label>
+            <Input className="form-control" type="date" onChange={handleDateNaissanceChange}/>
          </div>
          <div className="mt-3 d-inline-flex gap-4 align-items-center">
-            <label htmlFor="" className="">Sexe</label>
+            <Label htmlFor="" className="">Sexe</Label>
             <div className="d-inline-flex gap-2 align-items-center">
-               <input className="form-check" type="radio" name="sexe" value="Homme" onChange={handleSexeChange}/>
-               <label htmlFor="" className="">Masculin</label>
+               <Input className="form-check" type="radio" name="sexe" value="Homme" onChange={handleSexeChange}/>
+               <Label htmlFor="" className="">Masculin</Label>
             </div>
             <div  className="d-inline-flex gap-2 align-items-center">
-               <input className="form-check" type="radio" name="sexe" value="Femme" onChange={handleSexeChange}/>
-               <label htmlFor="" className="">Feminin</label>
+               <Input className="form-check" type="radio" name="sexe" value="Femme" onChange={handleSexeChange}/>
+               <Label htmlFor="" className="">Feminin</Label>
             </div>
          </div>
    
          <div className="mt-3">
-            <label htmlFor="" className="form-label">Diplômes</label>
+            <Label htmlFor="" className="form-Label">Diplômes</Label>
             <div>
                <div className="d-flex gap-2">
-                  <input className="form-check" type="checkbox" value="Technicien" onChange={handleDimplomesChange}/>
-                  <label htmlFor="" className="">Technicien</label>
+                  <Input className="form-check" type="checkbox" value="Technicien" onChange={handleDimplomesChange}/>
+                  <Label htmlFor="" className="">Technicien</Label>
                </div>      
 
                <div className="d-flex gap-2">
-                  <input className="form-check" type="checkbox" value="Technicien Specialisé"onChange={handleDimplomesChange}/>
-                  <label htmlFor="" className="">Technicien Specialisé</label>
+                  <Input className="form-check" type="checkbox" value="Technicien Specialisé"onChange={handleDimplomesChange}/>
+                  <Label htmlFor="" className="">Technicien Specialisé</Label>
                </div>
 
                <div className="d-flex gap-2">
-                  <input className="form-check" type="checkbox" value="Licence"onChange={handleDimplomesChange}/>
-                  <label htmlFor="" className="">Licence</label>
+                  <Input className="form-check" type="checkbox" value="Licence"onChange={handleDimplomesChange}/>
+                  <Label htmlFor="" className="">Licence</Label>
                </div>
 
                <div className="d-flex gap-2">
-                  <input className="form-check" type="checkbox" value="Master"onChange={handleDimplomesChange}/>
-                  <label htmlFor="" className="">Master</label>
+                  <Input className="form-check" type="checkbox" value="Master"onChange={handleDimplomesChange}/>
+                  <Label htmlFor="" className="">Master</Label>
                </div>
 
                <div className="d-flex gap-2">
-                  <input className="form-check" type="checkbox" value="Ingénieur" onChange={handleDimplomesChange}/>
-                  <label htmlFor="" className="">Ingénieur</label>
+                  <Input className="form-check" type="checkbox" value="Ingénieur" onChange={handleDimplomesChange}/>
+                  <Label htmlFor="" className="">Ingénieur</Label>
                </div>
 
                <div className="d-flex gap-2">
-                  <input className="form-check" type="checkbox" value="Doctorat" onChange={handleDimplomesChange}/>
-                  <label htmlFor="" className="">Doctorat</label>
+                  <Input className="form-check" type="checkbox" value="Doctorat" onChange={handleDimplomesChange}/>
+                  <Label htmlFor="" className="">Doctorat</Label>
                </div>
                   
             </div>
          </div>
    
          <div className="mt-3">
-            <label htmlFor="" className="form-label">Ville</label>
+            <Label htmlFor="" className="form-Label">Ville</Label>
             <select className="form-select" onChange={handleVilleChange}>
                <option value="Errachidia">Errachidia</option>
                <option value="Meknes">Meknes</option>
@@ -152,8 +146,9 @@ export const Main = () => {
          </div>
    
          <div className="text-center mt-4">
-            <button className="btn btn-outline-success px-5">Submit</button>
+            <Button className="btn btn-outline-success px-5 mb-5">Submit</Button>
          </div>
+         {afficher && <Info info={info} />}
       </form>
    );
 

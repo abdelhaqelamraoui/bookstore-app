@@ -1,0 +1,6 @@
+
+
+.twoColumns {
+   display: flex;
+   justify-content: space-between;
+}
