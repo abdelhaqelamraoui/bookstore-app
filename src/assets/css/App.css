@@ -1,25 +1,10 @@
 
-
-html, body {
-  padding: 0;
-  margin: 0;
-
-  background-image: url('../img/bg.jpg');
-  background-size: cover;
-  
-}
+@import url('global.css');
+@import url('bootstrap.min.css');
+@import url('navbar.css');
+@import url('error.css');
+@import url('main.css');
+@import url('livre.css');
 
 .App {
-  /* text-align: center; */
-}
-
-
-@font-face {
-  font-family: barlow-medium;
-  src: url('../fonts/Barlow-Medium.ttf');
-}
-
-@font-face {
-  font-family: barlow;
-  src: url('../fonts/Barlow-Regular.ttf');
 }

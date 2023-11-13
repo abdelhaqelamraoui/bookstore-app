@@ -1,0 +1,29 @@
+.main {
+   height: max-content;
+   padding-top: 5em;
+   padding-bottom: 5em;
+}
+
+.grid-container {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 2em;
+   width: 100%;
+   /* max-height: 100px !important; */
+}
+
+@media screen and (max-width: 1000px) {
+   .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-left: 2em;
+      padding-right: 2em;
+   }
+}

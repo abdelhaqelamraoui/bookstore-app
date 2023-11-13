@@ -1,0 +1,38 @@
+
+/* ----------- navbar ------------ */
+
+.logo {
+   height: 40px;
+}
+
+.navbar {
+   /* height: 40px; */
+   /* background-color: rgb(14, 14, 18);
+   text-align: left;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   padding: 0.4em 1em; */
+   z-index: 9999;
+   background-color: #d1e5ed !important;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.316) !important;
+}
+
+.navbar nav {
+   /* height: 100%; */
+}
+
+.navbar nav * {
+   color: rgba(19, 16, 16, 0.908);
+   /* border: 1px solid rgba(244, 244, 244, 0.124); */
+   cursor: pointer;
+   text-decoration: none;
+   /* margin-right: 2em;
+   padding: 0.4em 1em;
+   border-radius: 0.1em; */
+}
+
+.navbar nav *:hover{
+   color: rgb(14, 14, 18);
+}
+

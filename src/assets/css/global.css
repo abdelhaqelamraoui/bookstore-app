@@ -1,0 +1,54 @@
+
+
+
+
+
+html, body {
+  padding: 0;
+  margin: 0;  
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+body {
+  background-color: rgb(238, 237, 207, 0.3) !important;
+  padding-bottom: 5em;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: lightseagreen;
+  border-radius: 6px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: black  ; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.8;
+}
+
+
+@font-face {
+  font-family: barlow-medium;
+  src: url('../fonts/Barlow-Medium.ttf');
+}
+
+@font-face {
+  font-family: barlow-semi-bold;
+  src: url('../fonts/Barlow-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: barlow-bold;
+  src: url('../fonts/Barlow-Bold.ttf');
+}
+
+@font-face {
+  font-family: barlow;
+  src: url('../fonts/Barlow-Regular.ttf');
+}

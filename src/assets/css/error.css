@@ -1,0 +1,13 @@
+
+/* ------------------error page----------------- */
+
+.error {
+   text-align: center;
+}
+
+.error * {
+   color: red;
+   font-size: 3em;
+   font-weight: normal;
+   font-family: Barlow, Calibr, Aria, sans-serif;
+}
