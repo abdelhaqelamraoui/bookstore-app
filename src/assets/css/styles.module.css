@@ -1,6 +1,9 @@
 
 
 .twoColumns {
-   display: flex;
-   justify-content: space-between;
+   /* display: flex;
+   justify-content: space-around; */
+   display: grid;
+   grid-template-columns: 50% 50%;
+   gap: 2em;
 }

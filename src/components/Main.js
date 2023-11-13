@@ -1,8 +1,8 @@
 
 import React, { useState } from "react";
-import { Button, H2, Input, Label} from "./StyledComponents";
+import { Button, DialogueContainer, H2, Input, Label} from "./StyledComponents";
 import { Info } from "./Info";
-
+import registered from "./../assets/icons/registered.png"
 
 export const Main = () => {
 
@@ -66,13 +66,18 @@ export const Main = () => {
          'diplomes': diplomes,
          'ville': ville
       })
-      setAfficher(true)
+      setAfficher(true);
    }
 
 
    return (
-      <form className="w-50" onSubmit={handleFormSubmit}>
-         <H2>Gestion des Employés</H2>
+      <form className="w-50 bg-light p-4 border border-2 rounded rounded-3" onSubmit={handleFormSubmit}>
+         <div className="d-flex justify-content-between">
+            <H2 className="title">Gestion des Employés</H2>
+            <img className="icon" src={registered} />
+            {/* <img className="icon" src="asstes/icons/registered.png" /> */}
+         </div>
+         
          <div className="mt-3">
             <Label htmlFor="" className="form-Label">Matricule</Label>
             <Input className="form-control" type="text" onChange={handleMatriculeChange}/>
@@ -149,6 +154,7 @@ export const Main = () => {
             <Button className="btn btn-outline-success px-5 mb-5">Submit</Button>
          </div>
          {afficher && <Info info={info} />}
+         {/* {afficher && <InfoDialogue title={"Infos"} info={info} />} */}
       </form>
    );
 
