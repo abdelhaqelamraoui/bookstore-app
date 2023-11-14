@@ -1,7 +1,6 @@
 
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Livre } from "./Livre";
-import testImg from "../assets/icons/logo.png";
 import imgLivre1 from "../assets/img/livre-1.png";
 import imgLivre2 from "../assets/img/livre-2.png";
 import imgLivre3 from "../assets/img/livre-3.png";
@@ -40,9 +39,10 @@ export const Main = () => {
          dateEdition: new Date()
       },
       
-      
    ];
 
+   data = data.concat(data);
+   data = data.concat(data);
    data = data.concat(data);
 
 
