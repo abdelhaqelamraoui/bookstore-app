@@ -1,0 +1,34 @@
+
+.dark {
+   background-color: #292929;
+}
+
+.dark * {
+   color: rgba(255, 255, 255, 0.848);
+   border-color: rgba(255, 255, 255, 0.829) !important;
+}
+
+.dark .navbar {
+   background-color: rgb(40, 54, 66) !important;
+   border-bottom: 1px solid rgb(43, 55, 66) !important;
+}
+
+.dark .navbar * {
+   color: hsl(42, 100%, 70%);
+}
+
+.dark label {
+   color: lightblue !important;
+}
+
+
+
+.dark-button {
+   background: none;
+   border: none;
+}
+
+.dark-button img {
+   width: 26px;
+   cursor: pointer;
+}

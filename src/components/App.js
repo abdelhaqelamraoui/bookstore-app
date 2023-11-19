@@ -10,12 +10,14 @@ import '../assets/css/App.css';
 export const AppContext = createContext();
 
 const App = () => {
+
+   document.getElementById('root').classList = localStorage.getItem('theme');
    
    return (
       <div className="App">
          {/* <AppContext.Provider value={{}}> */}
             <BrowserRouter>
-               <div className="navbar position-fixed bg-light py-2 top-0 w-100 px-4">
+               <div className="navbar position-fixed bg-light py-2 px-4 top-0 w-100">
                   <Navbar />
                </div>
                <div className="main container">

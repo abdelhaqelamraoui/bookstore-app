@@ -15,15 +15,28 @@
 @media screen and (max-width: 1000px) {
    .grid-container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+}
+
+@media screen and (max-width: 800px) {
+   .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
    .grid-container {
       display: grid;
       grid-template-columns: 1fr;
       padding-left: 2em;
       padding-right: 2em;
+   }
+
+   .navbar {
+      padding-left: 1em !important;
+      padding-right: 1em !important;
    }
 }

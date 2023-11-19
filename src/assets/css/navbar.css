@@ -15,7 +15,7 @@
    padding: 0.4em 1em; */
    z-index: 9999;
    background-color: #d1e5ed !important;
-   border-bottom: 1px solid rgba(0, 0, 0, 0.316) !important;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.467) !important;
 }
 
 .navbar nav {
@@ -34,17 +34,4 @@
 
 .navbar nav *:hover{
    color: rgb(14, 14, 18);
-}
-
-.dark {
-   background-color: #292929;
-}
-
-.dark * {
-   color: rgba(255, 255, 255, 0.848);
-   border-color: rgba(255, 255, 255, 0.829) !important;
-}
-
-.dark label {
-   color: lightblue !important;
 }

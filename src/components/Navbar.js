@@ -1,30 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import logo from "./../assets/icons/logo.png"
-
+import logo from "./../assets/icons/logo.png";
+import darkModeIcon from "./../assets/icons/brightness-and-contrast.png";
 
 export const Navbar = () => {
 
-   const [isChecked, setIsChecked] = useState(false);
 
-   const handleCheck = event => {
-      if(localStorage.getItem('theme') === 'dark') {
-         document.getElementById('root').className = '';
+   const chnageTheme = event => {
+
+      const root = document.getElementById('root');
+      const theme = localStorage.getItem('theme');
+
+      if( theme === 'dark') {
+         root.className = '';
          localStorage.setItem('theme', 'light');
       } else {
-         document.getElementById('root').className = 'dark';
+         root.className = 'dark';
          localStorage.setItem('theme', 'dark');
       }
    }
 
 
    return (
-      <nav className="w-100 px-4 h-100 d-flex justify-content-between align-items-center">
+      <nav className="w-100 d-flex justify-content-between align-items-center">
          <Link to="/" className="fw-bold">Librairie DEVOWS</Link>
          <Link to="/" className="d-flex justify-content-between align-items-center gap-3">
             <div>
-               <span className="fw-bold me-3">Mode Sombre</span>
-               <input className="" type="checkbox" onClick={handleCheck} />
+               <button className="dark-button" onClick={chnageTheme}>
+                  <img src={darkModeIcon} alt="dark icon" />
+               </button>
             </div>
             <img src={logo} className="logo" alt="logo"/>
          </Link>
