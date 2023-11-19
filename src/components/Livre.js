@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import addToCartIcon from './../assets/icons/add-to-cart.png';
+import { AppContext } from "./App";
 
-const addToCart = (event) => {
-   event.target.setAttribute('disabled', true);
-   event.target.className = 'disabled';
-}
 
 export const Livre = (props) => {
    const livre = props.livre;
    const POUCENTAGE = 10 / 100;
    const oldPrice = Math.round(livre.price + livre.price * POUCENTAGE);
 
+   const [panier, setPanier] = useContext(AppContext);
+   
+
+   const addToCart = (event) => {
+      event.target.parentElement.setAttribute('disabled', true);
+      event.target.setAttribute('disabled', true);
+      event.target.className = 'disabled';
+      setPanier([...panier, livre]);
+   }
 
    return (
       <div className="livre">

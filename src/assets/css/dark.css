@@ -20,15 +20,3 @@
 .dark label {
    color: lightblue !important;
 }
-
-
-
-.dark-button {
-   background: none;
-   border: none;
-}
-
-.dark-button img {
-   width: 26px;
-   cursor: pointer;
-}

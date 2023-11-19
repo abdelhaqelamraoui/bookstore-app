@@ -39,7 +39,7 @@
 
 /* ********* dark button ********************* */
 
-.dark-button {
+.dark-button, .cart-button {
    background: none;
    border: none;
 }
@@ -52,11 +52,34 @@
 
 
 /* ********* cart ********************* */
-
 .cart-button {
-   
+   background: none;
+   border: none;
+   position: relative;
 }
 
 .cart-button img {
+   width: 26px;
+   cursor: pointer;
+}
 
+.cart-button .counter {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: -10px;
+   right: -10px;
+}
+
+.cart-button .counter span {
+   border: 1px solid rgb(94, 42, 42);
+   background-color: rgb(185, 72, 76);
+   color: white;
+   border-radius: 50%;
+   width: 3ch;
+   font-family: Arial, sans-serif;
+   font-size: 12px;
+   padding: 0;
+   margin: 0;
 }
