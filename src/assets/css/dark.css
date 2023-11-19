@@ -20,3 +20,15 @@
 .dark label {
    color: lightblue !important;
 }
+
+
+/* **********painier ************ */
+
+.dark .panier {
+   background-color: #070d0d;
+}
+
+.dark .panier * {
+   color: whitesmoke;
+}
+

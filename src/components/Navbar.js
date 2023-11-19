@@ -1,13 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "./../assets/icons/logo.png";
 import darkModeIcon from "./../assets/icons/brightness-and-contrast.png";
 import cartIcon from "./../assets/icons/shopping-cart.png";
 import { AppContext } from "./App";
+import { Panier } from "./Panier";
 
 export const Navbar = () => {
 
    const [panier] = useContext(AppContext);
+
+   const [togglePanier, setTogglePanier] = useState(false);
 
    const changeTheme = event => {
 
@@ -24,6 +27,11 @@ export const Navbar = () => {
    }
 
 
+   const showPanier = (event) => {
+      setTogglePanier(! togglePanier);
+   }
+
+
    return (
       <nav className="w-100 d-flex justify-content-between align-items-center">
 
@@ -31,7 +39,7 @@ export const Navbar = () => {
 
          <div className="d-flex align-items-between align-items-center gap-3">
 
-            <button className="cart-button">
+            <button className="cart-button" onClick={showPanier}>
                <img src={cartIcon} alt="dark icon" />
                <div className="counter">
                   <span>{panier.length}</span>
@@ -46,6 +54,7 @@ export const Navbar = () => {
                <img src={logo} className="logo" alt="logo"/>
             </Link>
          </div>
+         {togglePanier && <Panier />}
       </nav>
    );
 };

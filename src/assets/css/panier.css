@@ -1,0 +1,68 @@
+
+
+.panier {
+   position: absolute;
+   top: 56px;
+   right: 0;
+   height: 400px;
+   background-color: #ecece9;
+   padding: 10px 4px;
+   padding-bottom: 0;
+   border: 1px solid #4642429e;
+   width: 300px;
+   overflow-y: scroll;
+}
+
+.panier > div {
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+
+.panier .liste-livres {
+   margin-bottom: 40px;
+   max-height: 354px;
+   overflow-y: scroll;
+}
+
+.panier .panier-row {
+   display: grid;
+   padding: 4px 8px;
+   gap: 0.8em;
+   grid-template-columns: 1fr 9ch 22px;
+   color: darkslategrey;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   border-left: 1px solid hsl(197, 93%, 29%);
+   border-right: 1px solid hsl(197, 93%, 29%);
+}
+
+.livre-titre {
+   max-width: 20ch; 
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+
+.livre-price {
+   text-align: right;
+}
+
+.remove-button {
+   background: none;
+   border: none;
+}
+
+.remove-button img {
+   width: 22px;
+}
+
+
+.total {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   padding: 4px;
+   text-align: center;
+   border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
