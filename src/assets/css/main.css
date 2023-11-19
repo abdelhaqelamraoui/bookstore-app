@@ -39,4 +39,14 @@
       padding-left: 1em !important;
       padding-right: 1em !important;
    }
+
+   /**
+    * disabling the scale of the image
+    *
+   */
+   .livre .image:hover {
+      object-fit: cover !important;
+      scale: 1 !important;
+      background-color: red;
+   } 
 }

@@ -35,3 +35,28 @@
 .navbar nav *:hover{
    color: rgb(14, 14, 18);
 }
+
+
+/* ********* dark button ********************* */
+
+.dark-button {
+   background: none;
+   border: none;
+}
+
+.dark-button img {
+   width: 26px;
+   cursor: pointer;
+}
+
+
+
+/* ********* cart ********************* */
+
+.cart-button {
+   
+}
+
+.cart-button img {
+
+}

@@ -15,28 +15,32 @@ export const Main = () => {
          titre: "Les tribulations du dernier Sijilmassi",
          auteur: "Fouad El Aroui",
          editeur: "Juliard",
-         dateEdition: new Date()
+         dateEdition: new Date(),
+         price: 120
       },
       {
          image: imgLivre2,
          titre: "30 jours pour trouver un mari",
          auteur: "Fouad El Aroui",
          editeur: "Juliard",
-         dateEdition: new Date()
+         dateEdition: new Date(),
+         price: 80
       },
       {
          image: imgLivre3,
          titre: "Plaidoyer pour les Arabes",
          auteur: "Fouad El Aroui",
          editeur: "Juliard",
-         dateEdition: new Date()
+         dateEdition: new Date(),
+         price: 110
       },
       {
          image: imgLivre4,
          titre: "Une année chez les Français",
          auteur: "Fouad El Aroui",
          editeur: "Juliard",
-         dateEdition: new Date()
+         dateEdition: new Date(),
+         price: 90
       },
       
    ];

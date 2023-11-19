@@ -10,18 +10,11 @@
    border-radius: 2px;
    display: flex;
    flex-direction: column;
-   /* max-width: 300px; */
-
-   /* box-shadow: 4px 1px 0px 1px rgba(14, 63, 61, 0.985); */
-   /* box-shadow: 0px 0px 1px 1px rgba(14, 63, 61, 0.092);
-   border-left: 4px solid rgba(14, 63, 61, 0.985);
-   border-right: 3px double rgba(14, 63, 61, 0.985); */
    border-bottom: 2px solid rgba(14, 63, 61, 0.985);
-    /* height: 500px !important; */
 }
 
 .livre:hover {
-   scale: 1.02;
+   /* scale: 1.02; */
 }
 
 
@@ -32,12 +25,18 @@
    width: auto;
    object-fit: cover;
    border: none; 
-   border-bottom: 1px solid rgba(0, 0, 0, 0.6);
    border-bottom-left-radius: 0;
    border-bottom-right-radius: 0;
 }
 
-
+.livre .image:hover {
+   object-fit: contain;
+   /* scale: 1.4; */
+   height: max-content;
+   border: 1px solid rgba(0,0,0,0.6);
+   padding: 0;
+   margin: 0;
+}
 
 .livre .infos {
    flex: auto;
@@ -46,7 +45,7 @@
    border-radius: 0;
    display: flex;
    flex-direction: column;
-   /* border-left: 4px solid #008B45; */
+   border-top: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 
@@ -56,6 +55,7 @@
    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
    font-family: barlow-semi-bold;
    padding: 0.4em;
+   padding-top: 0;
    text-transform: uppercase;
    font-size: 1rem;
    max-lines: 1;
@@ -63,7 +63,7 @@
 }
 
 
-.livre .infos .details{
+.livre .infos .details {
    
 }
 
@@ -80,4 +80,49 @@
 
 .livre .infos .details > div div{
    /**/
+}
+
+
+/* ********** purchase ********* */
+
+.purchase-info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.prices .old-price {
+   text-decoration: line-through;
+   color: #e63746;
+   margin-right: 0.7em;
+   font-size: 0.9em;
+}
+
+.prices .new-price {
+   color: green;
+   font-size: 1.1em;
+}
+
+.prices {
+
+}
+
+
+.add-to-card-button {
+   background: none;
+   border: none;
+}
+
+.add-to-card-button img {
+   /* cursor: pointer; */
+   width: 30px;
+}
+
+.add-to-card-button img:hover {
+   scale: 1.3;
+}
+
+.disabled {
+   opacity: 0.4;
+   cursor: default;
 }

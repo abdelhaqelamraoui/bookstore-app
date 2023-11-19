@@ -1,8 +1,16 @@
 import React from "react";
+import addToCartIcon from './../assets/icons/add-to-cart.png';
 
+const addToCart = (event) => {
+   event.target.setAttribute('disabled', true);
+   event.target.className = 'disabled';
+}
 
 export const Livre = (props) => {
-   const livre = props.livre
+   const livre = props.livre;
+   const POUCENTAGE = 10 / 100;
+   const oldPrice = Math.round(livre.price + livre.price * POUCENTAGE);
+
 
    return (
       <div className="livre">
@@ -22,6 +30,15 @@ export const Livre = (props) => {
                   <label>Date d'Edition</label>
                   <div>{livre.dateEdition.toISOString().split('T').at(0)}</div>
                </div>
+            </div>
+            <div className="purchase-info">
+               <div className="prices">
+                  <span className="old-price">{oldPrice} MAD</span>
+                  <span className="new-price">{livre.price} MAD</span>
+               </div>
+               <button onClick={addToCart} className="add-to-card-button">
+                  <img src={addToCartIcon} alt="add to cart icon" />
+               </button>
             </div>
          </div>
       </div>
